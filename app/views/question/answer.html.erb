@@ -1,0 +1,11 @@
+<h1>You said : <%= @answer %></h1>
+
+<% if @answer == "I am going to work" %>
+  <%= "Go back to sleep!" %>
+<% elsif @answer.end_with?("?") %>
+  <%= "Silly question, get dressed and go to work!" %>
+<% else %>
+  <%= "I don't care, get dressed and go to bed!" %>
+<% end %>
+
+<h4> <%= link_to 'Ask a new question?' , "ask" %></h4>
